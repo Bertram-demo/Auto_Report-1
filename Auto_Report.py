@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
         # 2、监控时间，启动程序
         while True:
-            if (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).hour == 0 and (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).minute >= 10:
+            if (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).hour == 0 and (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).minute >= 20:
                 break
             time.sleep(60)
 
@@ -113,7 +113,7 @@ if __name__ == "__main__":
             count += 1
             print(response)
             print(response.text)
-        if count >= 40:
+        if count > 200:
             print("打卡失败")
 
     except IndexError:
